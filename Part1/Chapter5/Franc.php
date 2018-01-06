@@ -3,9 +3,9 @@ declare(strict_types=1);
 
 namespace Part1\Chapter5;
 
-class Dollar
+class Franc
 {
-    /** @var int */
+    /** @var */
     private $amount;
 
     /**
@@ -18,19 +18,19 @@ class Dollar
 
     /**
      * @param int $multiplier
-     * @return Dollar
+     * @return Franc
      */
-    public function times(int $multiplier): Dollar
+    public function times(int $multiplier): Franc
     {
-        return new Dollar($this->amount * $multiplier);
+        return new Franc($this->amount * $multiplier);
     }
 
     /**
-     * @param Dollar $dollar
+     * @param Franc $franc
      * @return bool
      */
-    public function equals(Dollar $dollar): bool
+    public function equals(Franc $franc): bool
     {
-        return $this->amount ===  $dollar->amount;
+        return $this->amount === $franc->amount;
     }
 }
