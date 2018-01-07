@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Part1\Chapter6;
+namespace Part1\Chapter7;
 
 require_once 'Part1/Chapter7/Dollar.php';
 require_once 'Part1/Chapter7/Franc.php';
@@ -34,6 +34,6 @@ class MoneyTest extends TestCase
         $this->assertTrue((new Franc(5))->equals(new Franc(5)));
         $this->assertFalse((new Franc(5))->equals(new Franc(6)));
 
-        $this->assertFalse((new Franc(5))->equals(new Dollar(5)));
+        $this->assertFalse((new Dollar(5))->equals(new Franc(5)));
     }
 }

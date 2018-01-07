@@ -3,11 +3,10 @@ declare(strict_types=1);
 
 namespace Part1\Chapter7;
 
-class Franc
-{
-    /** @var */
-    private $amount;
+require_once 'Part1/Chapter7/Money.php';
 
+class Franc extends Money
+{
     /**
      * @param int $amount
      */
@@ -23,14 +22,5 @@ class Franc
     public function times(int $multiplier): Franc
     {
         return new Franc($this->amount * $multiplier);
-    }
-
-    /**
-     * @param Franc $franc
-     * @return bool
-     */
-    public function equals(Franc $franc): bool
-    {
-        return $this->amount === $franc->amount;
     }
 }
