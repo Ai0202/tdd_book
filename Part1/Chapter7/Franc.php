@@ -1,7 +1,7 @@
 <?php
 declare(strict_types=1);
 
-namespace Part1\Chapter5;
+namespace Part1\Chapter7;
 
 class Franc
 {

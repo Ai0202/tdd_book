@@ -1,11 +1,11 @@
 <?php
 declare(strict_types=1);
 
-namespace Part1\Chapter6;
+namespace Part1\Chapter7;
 
-require_once 'Part1/Chapter6/Money.php';
+require_once 'Part1/Chapter7/Money.php';
 
-class Franc extends Money
+class Dollar extends Money
 {
     /**
      * @param int $amount
@@ -17,10 +17,10 @@ class Franc extends Money
 
     /**
      * @param int $multiplier
-     * @return Franc
+     * @return Dollar
      */
-    public function times(int $multiplier): Franc
+    public function times(int $multiplier): Dollar
     {
-        return new Franc($this->amount * $multiplier);
+        return new Dollar($this->amount * $multiplier);
     }
 }
